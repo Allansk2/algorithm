@@ -27,6 +27,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         int[][] edges = new int[][] {
                 {0, 1},
                 {1, 2},
@@ -39,6 +41,7 @@ public class MainActivity extends Activity {
         final boolean b = solution.validTree(5, edges);
         int a = 0;
     }
+
 
     public class Solution {
         /**
