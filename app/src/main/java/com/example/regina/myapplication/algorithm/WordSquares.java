@@ -115,13 +115,13 @@ public class WordSquares {
             return;
         }
 
-        String prefix = "";
+        StringBuilder sb = new StringBuilder();
         int row = subset.size();
         for (int i = 0; i < subset.size(); i++) {
-            prefix += subset.get(i).charAt(row);
+            sb.append(subset.get(i).charAt(row));
         }
 
-        final List<String> words = tree.findPrefix(prefix);
+        final List<String> words = tree.findPrefix(sb.toString());
         for (String word : words) {
             subset.add(word);
             dfs(len, tree, ans, subset);
