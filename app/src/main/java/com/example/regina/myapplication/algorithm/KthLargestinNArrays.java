@@ -1,45 +1,37 @@
-package com.example.regina.myapplication;
+package com.example.regina.myapplication.algorithm;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.os.Build.VERSION_CODES;
-import android.os.Bundle;
-import android.support.annotation.RequiresApi;
+//543. Kth Largest in N Arrays
+//        中文English
+//        Find K-th largest element in N arrays.
+//
+//        Example
+//        Example 1:
+//
+//        Input:
+//        k=3, [[9,3,2,4,7],[1,2,3,4,8]]
+//        Output:
+//        7
+//        Explanation:
+//        the 3rd largest element is 7
+//
+//        Example 2:
+//
+//        Input:
+//        k = 2, [[9,3,2,4,8],[1,2,3,4,2]]
+//        Output:
+//        8
+//        Explanation:
+//        the 1st largest element is 9, 2nd largest element is 8, 3rd largest element is 4 and etc.
+//
+//        Notice
+//        You can swap elements in the array
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Set;
 
-public class MainActivity extends Activity {
-
-    @TargetApi (VERSION_CODES.O)
-    @RequiresApi (api = VERSION_CODES.N)
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        int[][] arrays = new int[][]{
-                {},
-                {},
-                {1},
-                {1, 2, 3, 4},
-                {11, 10, 9, 8, 7}
-        };
-
-        final int i = KthInArrays(arrays, 5);
-        int a = 0;
-    }
+public class KthLargestinNArrays {
 
     public class Node {
         int rowIndex;
@@ -104,5 +96,3 @@ public class MainActivity extends Activity {
         return -1;
     }
 }
-
-
